@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.sistema.backend.dto.DashboardDTO;
 import com.sistema.backend.repository.EspecialidadeRepository;
+import com.sistema.backend.repository.ListaEsperaRepository;
 import com.sistema.backend.repository.RegistroDiarioRepository;
 import com.sistema.backend.repository.UsuarioRepository;
 
@@ -17,6 +18,8 @@ public class DashboardService {
 
 	private final EspecialidadeRepository especialidadeRepository;
 
+	private final ListaEsperaRepository listaEsperaRepository;
+
 	private final UsuarioRepository usuarioRepository;
 
 	public DashboardDTO obterTotais() {
@@ -28,6 +31,10 @@ public class DashboardService {
 				.totalEspecialidades(especialidadeRepository.count())
 
 				.totalUsuarios(usuarioRepository.count())
+
+				.totalListaEspera(listaEsperaRepository.count())
+
+				.totalConfirmadosLista(listaEsperaRepository.countByConfirmadoTrue())
 
 				.build();
 	}

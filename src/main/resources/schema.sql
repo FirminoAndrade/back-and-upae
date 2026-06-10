@@ -90,6 +90,27 @@ CREATE TABLE agenda (
 );
 
 
+CREATE TABLE lista_espera (
+
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    nome VARCHAR(255) NOT NULL,
+
+    prontuario VARCHAR(50),
+
+    telefone VARCHAR(20),
+
+    data_nascimento DATE,
+
+    especialidade VARCHAR(150),
+
+    confirmado BOOLEAN DEFAULT FALSE,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
 
 
 

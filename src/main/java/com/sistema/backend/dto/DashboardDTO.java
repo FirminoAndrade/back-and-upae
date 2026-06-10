@@ -18,4 +18,8 @@ public class DashboardDTO {
     private Long totalEspecialidades;
 
     private Long totalUsuarios;
+    
+    private Long totalListaEspera;
+
+	private Long totalConfirmadosLista;
 }

@@ -24,4 +24,8 @@ public class ListaEsperaDTO {
 	private String especialidade;
 
 	private Boolean confirmado;
+	
+	private LocalDate dataSolicitada;
+
+	private String nomeMedico;
 }

@@ -37,6 +37,12 @@ public class ListaEspera {
 	private String especialidade;
 
 	private Boolean confirmado = false;
+	
+	@Column(name = "data_solicitada")
+	private LocalDate dataSolicitada;
+
+	@Column(name = "nome_medico")
+	private String nomeMedico;
 
 	@Column(name = "created_at")
 	private LocalDateTime createdAt;

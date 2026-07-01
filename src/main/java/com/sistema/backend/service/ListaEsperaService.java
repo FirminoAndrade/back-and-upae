@@ -29,10 +29,10 @@ public class ListaEsperaService {
 		item.setProntuario(dto.getProntuario());
 		item.setTelefone(dto.getTelefone());
 		item.setDataNascimento(dto.getDataNascimento());
-
 		item.setEspecialidade(dto.getEspecialidade());
-
 		item.setConfirmado(dto.getConfirmado());
+		item.setDataSolicitada(dto.getDataSolicitada());
+		item.setNomeMedico(dto.getNomeMedico());
 
 		return repository.save(item);
 	}
@@ -44,12 +44,11 @@ public class ListaEsperaService {
 		item.setNome(dto.getNome());
 		item.setProntuario(dto.getProntuario());
 		item.setTelefone(dto.getTelefone());
-
-		item.setDataNascimento(dto.getDataNascimento());
-
-		item.setEspecialidade(dto.getEspecialidade());
-
-		item.setConfirmado(dto.getConfirmado());
+        item.setDataNascimento(dto.getDataNascimento());
+        item.setEspecialidade(dto.getEspecialidade());
+        item.setConfirmado(dto.getConfirmado());
+        item.setDataSolicitada(dto.getDataSolicitada());
+        item.setNomeMedico(dto.getNomeMedico());
 
 		return repository.save(item);
 	}
